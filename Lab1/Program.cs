@@ -154,7 +154,6 @@ namespace Lab1
 
             for (int i = 0; i < users.Length; i++)
             {
-                Console.WriteLine(users[i]);
                 cal.displayEvents();
             }  
         }
