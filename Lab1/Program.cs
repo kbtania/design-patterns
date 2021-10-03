@@ -6,11 +6,6 @@ namespace Lab1
 {
     class Program
     {
-        interface IPrototype
-        {
-            IPrototype Clone();
-        }
-
         class Event
         {
             public DateTime date;
