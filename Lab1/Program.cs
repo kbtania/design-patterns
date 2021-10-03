@@ -140,10 +140,12 @@ namespace Lab1
 
             Meeting m1 = new Meeting(new DateTime(2021, 10, 20), "Meeting1", "key1", users, new DateTime(2021, 10, 20), new DateTime(2021, 10, 21), "location1");
             Meeting m2 = m1.Clone();
+            m2.date = new DateTime(2021, 11, 19);
             m2.description = "Meeting2";
             User u3 = new User("log3", "pass3", "email3");
             var b1 = new Birtday(new DateTime(2021, 12, 12), "Birtday Event", "secretkey", users, u3);
             var b2 = b1.Clone();
+            b2.date = new DateTime(2021, 10, 15);
             b2.birthdayPerson = new User("log4", "pass4", "email4");
 
             var cal = new Calendar();
@@ -152,10 +154,8 @@ namespace Lab1
             cal.addEvent(b1);
             cal.addEvent(b2);
 
-            for (int i = 0; i < users.Length; i++)
-            {
-                cal.displayEvents();
-            }  
+            cal.displayEvents();
+              
         }
     }
 }
