@@ -129,7 +129,8 @@ namespace Lab2
             //AdapterOrder adapterExample = new AdapterOrder(foodTypeExample, orderExample1);
             //adapterExample.MakeOrder();
 
-            Console.WriteLine("What would you like to order?\n 1 - Fast Food at McDonalds \n 2 - Sushi at Japanese Restaurant \n 3 - Ukrainian Food at Family Restaurant");
+            Console.WriteLine("What would you like to order?\n 1 - Fast Food at McDonalds " +
+                "\n 2 - Sushi at Japanese Restaurant \n 3 - Ukrainian Food at Family Restaurant");
             int foodType = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("How many different items from menu would you like to order?"); 
             int itemsCount = Convert.ToInt32(Console.ReadLine());
