@@ -8,7 +8,7 @@ namespace Lab4
     {
         public interface IObserver
         { 
-            // get updated from publisher
+            // get updates from publisher
             void Update(ISubject subject);
         }
         public interface ISubject
