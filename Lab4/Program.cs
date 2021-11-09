@@ -183,7 +183,7 @@ namespace Lab4
 
 
             var t2 = new TextNews("Sir Paul McCartney reveals parents inspired Beatles and solo songs", 
-                new List<string> { "music", "Thr Beatles" },
+                new List<string> { "music", "The Beatles" },
                 "Sir Paul McCartney has said his parents were the original inspiration for many of his songs " +
                 "and a huge influence on the way he approached his music...");
 
