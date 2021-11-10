@@ -16,7 +16,7 @@ namespace Lab4
             // attaches users to news
             void Attach(IObserver observer, string type);
 
-            // detaches users to news
+            // detaches users from news
             void Detach(IObserver observer, string type);
 
             // notifies user when news is added
