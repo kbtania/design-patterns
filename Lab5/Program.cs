@@ -55,16 +55,7 @@ namespace Lab5
             }
         }
 
-        public class ApartmentBuilding
-        {
-            public List<Apartment> apartments;
-            public ApartmentBuilding(List<Apartment> apartments)
-            {
-                this.apartments = apartments;
-            }
-            
-        }
-
+        
         public interface IVisitor
         {
             void VisitPrivateHouse(PrivateHouse element);
@@ -85,20 +76,11 @@ namespace Lab5
                     {
                         Console.WriteLine($"[Приватний будинок]: Вiйськкомат завiтав у гостi до {element.residents[i]}");
                     }
-
                 }
             }
 
             public void VisitApartment(Apartment element)
             {
-                // Console.WriteLine(element.SpecialMethodOfConcreteComponentB() + " + ConcreteVisitor1");
-                //for (int i = 0; i < element.residents.Count; i++)
-                //{
-                //    for (int j = 0; j < i; j++)
-                //    {
-                //        Console.WriteLine($"Military Office at apartment {element.residents[i]}");
-                //    }
-                //}
                 DateTime current_date = DateTime.Today;
                 for (int i = 0; i < element.residents.Count; i++)
                 {
@@ -108,7 +90,6 @@ namespace Lab5
                     {
                         Console.WriteLine($"[Багатоквартирний будинок]: Вiйськкомат завiтав у гостi до {element.residents[i]}");
                     }
-
                 }
             }
         }
@@ -117,20 +98,12 @@ namespace Lab5
         {
             public void VisitPrivateHouse(PrivateHouse element)
             {
-                for (int i = 0; i < element.residents.Count; i++)
-                {
-                    
-                    Console.WriteLine($"[Приватний будинок]: У будинку №{i+1} живе {element.residents.Count} осiб.");
-                }
-                
+                Console.WriteLine($"[Приватний будинок]: У будинку живе {element.residents.Count} осiб.");
             }
 
             public void VisitApartment(Apartment element)
             {
-                for (int i = 0; i < element.residents.Count; i++)
-                {
-                    Console.WriteLine($"[Багатоквартирний будинок]: У квартиpi №{i+1} живе {element.residents.Count} осiб.");
-                }
+                Console.WriteLine($"[Багатоквартирний будинок]: У квартиpi живе {element.residents.Count} осiб.");
             }
         }
 
@@ -175,17 +148,15 @@ namespace Lab5
             for (int i = 0; i < privateHouses.Count; i++)
             {
                 privateHouses[i].Accept(m);
-                //privateHouses[i].Accept(c);
             }
 
             for (int i = 0; i < apartments.Count; i++)
             {
                 apartments[i].Accept(m);
-                //apartments[i].Accept(c);
             }
 
             Console.WriteLine("\n");
-
+            
             for (int i = 0; i < privateHouses.Count; i++)
             {
                 privateHouses[i].Accept(c);
